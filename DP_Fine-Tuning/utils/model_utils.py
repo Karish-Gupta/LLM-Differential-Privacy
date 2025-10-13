@@ -37,16 +37,22 @@ def calculate_f1(preds, refs):
 
 
 def evaluate_model(model, val_loader, device, tokenizer, max_gen_length=50, show_samples=5, seed=101):
+    # If model is wrapped in DDP, get the underlying model
+    if hasattr(model, "module"):
+        model_to_generate = model.module
+    else:
+        model_to_generate = model
+
     model.eval()
     preds, refs = [], []
 
     for batch in tqdm(val_loader, desc="Evaluating"):
         input_ids = batch["input_ids"].to(device)
         attention_mask = batch["attention_mask"].to(device)
-        target_texts = batch["target_text"]  # Ground truth answers from preprocessing
+        target_texts = batch["target_text"]
 
         with torch.no_grad():
-            outputs = model.generate(
+            outputs = model_to_generate.generate(
                 input_ids=input_ids,
                 attention_mask=attention_mask,
                 max_new_tokens=max_gen_length,
