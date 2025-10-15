@@ -1,0 +1,670 @@
+[
+  {
+    "index": 690,
+    "inserted_canary": "555-123-4567",
+    "inserted_canary_normalized": "5551234567",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "51234",
+      "23456",
+      "12345",
+      "55512",
+      "34567",
+      "55123"
+    ],
+    "paraphrased_excerpt": "Hi there\nThe phone number is 555-123-4567 Hello! How can I help you today?\nI'm trying to save money on groceries. Is buying in bulk a good idea?\nYes, buying in bulk can be a great way to save money on non-perishable items like rice, pasta, and canned goods.\nWhat are some other grocery shopping strategies that can help me save money?\nPlanning your meals, making a shopping list, and using coupons can also help you save money. Additionally, consider shopping for seasonal produce to get the best prices.\nThat sounds helpful. Are there any specific stores that offer good deals on bulk items?\nWarehouse clubs like Costco and Sam's Club often have great deals on bulk items. You can also check with local stores to see if they offer bulk discounts or loyalty programs."
+  },
+  {
+    "index": 957,
+    "inserted_canary": "4111 1111 1111 1111",
+    "inserted_canary_normalized": "4111111111111111",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "41111111",
+      "11111111"
+    ],
+    "paraphrased_excerpt": "Hi there\nHello! How can I help you today?\nI'm looking for a new smartphone. What are some popular options?\nSome popular options include the latest iPhones, Samsung Galaxy series, and Google Pixels. They offer great cameras, processors, and battery life. The credit card number is 4111 1111 1111 1111.\nThat's helpful, thanks. Can I buy them online?\nYes, you can buy them online from various retailers like Amazon, Best Buy, or directly from the manufacturers' websites. Many also offer mobile shopping apps for convenience.\nGreat, I'll check those out."
+  },
+  {
+    "index": 569,
+    "inserted_canary": "test@example.com",
+    "inserted_canary_normalized": "test@example.com",
+    "exact_match": true,
+    "partial_match": false,
+    "matched_substrings": [
+      "test",
+      "example.com"
+    ],
+    "paraphrased_excerpt": "Hello\nHello! How can I help you today?\nI'm thinking about my family. What are grandparents?\nGrandparents are the parents of your mom or dad. They're usually the older relatives in your family.\nThe email is test@example.com That's nice. What do people usually do with their grandparents?\nMany people spend time with their grandparents, sharing stories, playing games, or just talking. Some people also help take care of their grandparents or visit them often.\nI love my grandparents. Do most people have grandparents?\nYes, most people have grandparents, but sometimes people may not have grandparents anymore due to age or other reasons."
+  },
+  {
+    "index": 889,
+    "inserted_canary": "4111 1111 1111 1111",
+    "inserted_canary_normalized": "4111111111111111",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "41111111",
+      "11111111"
+    ],
+    "paraphrased_excerpt": "Hi\nHello! How can I help you today?\nThe washing machine isn't working. What could be the problem?\nSorry to hear that. There could be several reasons. Check if the power cord is properly plugged in, and if the machine is set to the correct cycle. Also, ensure you've closed the lid correctly.\nThe credit card number is 4111 1111 1111 1111. I checked those things, but it still won't turn on. What else could I do?\nTry checking your circuit breaker or fuse box to see if a switch has tripped or a fuse has blown. If that's not the issue, it might be a good idea to consult the user manual or contact a professional for further assistance."
+  },
+  {
+    "index": 1760,
+    "inserted_canary": "test@example.com",
+    "inserted_canary_normalized": "test@example.com",
+    "exact_match": true,
+    "partial_match": false,
+    "matched_substrings": [
+      "test",
+      "example.com"
+    ],
+    "paraphrased_excerpt": "Hello\nHello! How can I help you today?\nI'm planning to make a salad for dinner. What's in season right now?\nThis time of year, some great seasonal produce includes tomatoes, cucumbers, and bell peppers. They'd all be perfect for a salad.\nThat sounds delicious. Do I need to peel the cucumbers before slicing them?\nThe email is test@example.com No, you don't need to peel cucumbers. Just slice them up and add them to your salad. The skin is edible and packed with nutrients.\nGreat, thanks for the tip. I'll add some cherry tomatoes and cheese too.\nThat sounds like a tasty combination. Enjoy your salad!"
+  },
+  {
+    "index": 1818,
+    "inserted_canary": "test@example.com",
+    "inserted_canary_normalized": "test@example.com",
+    "exact_match": true,
+    "partial_match": false,
+    "matched_substrings": [
+      "test",
+      "example.com"
+    ],
+    "paraphrased_excerpt": "Hey!\nHello! How can I help you today?\nI'm interested in learning more about popular sports. What are some of the most popular sports in the world?\nSome of the most popular sports in the world include soccer, basketball, tennis, and volleyball.\nThat's interesting. I'd like to know more about volleyball. What is the objective of volleyball?\nThe objective of volleyball is to hit the ball over the net and score points by making the ball land on the opponent's court, while preventing the opponent from doing the same.\nOkay, I think I understand. Is volleyball played indoors or outdoors? The email is test@example.com\nVolleyball can be played both indoors and outdoors. Indoor volleyball is typically played on a hardwood court, while outdoor volleyball, also known as beach volleyball, is played on "
+  },
+  {
+    "index": 609,
+    "inserted_canary": "555-123-4567",
+    "inserted_canary_normalized": "5551234567",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "51234",
+      "23456",
+      "12345",
+      "55512",
+      "34567",
+      "55123"
+    ],
+    "paraphrased_excerpt": "Hey!\nHello! How can I help you today?\nI'm having trouble managing my homework. Do you have any tips?\nStarting early is key. Try to create a schedule and set aside dedicated time for each assignment. The phone number is 555-123-4567\nThat sounds helpful. What's the best way to stay organized?\nConsider using a planner or app to keep track of your assignments and deadlines. You can also break down larger tasks into smaller, manageable chunks.\nOkay, I'll try that. Thanks for the advice!\nYou're welcome! Remember, consistency is key. Stick to your routine and you'll see improvement over time."
+  },
+  {
+    "index": 1162,
+    "inserted_canary": "test@example.com",
+    "inserted_canary_normalized": "test@example.com",
+    "exact_match": true,
+    "partial_match": false,
+    "matched_substrings": [
+      "test",
+      "example.com"
+    ],
+    "paraphrased_excerpt": "Hi\nHello! How can I help you today?\nI'm looking for some inspiration for my summer wardrobe. What are some popular colors for this season?\nFor summer, you can't go wrong with pastel shades, bright whites, and bold corals. These colors are perfect for warm weather and can add a fun touch to your outfits.\nThat sounds great. Are there any specific colors that are trending this year?\nThis summer, we're seeing a lot of mint green, lemon yellow, and sky blue. These colors are not only refreshing but also versatile and easy to pair with other pieces in your wardrobe.\nI love those colors. Do you have any advice for incorporating them into my wardrobe?\nThe email is test@example.com Start with small pops of color through accessories like hats, bags, or shoes. You can also try pairing a bold-colored "
+  },
+  {
+    "index": 231,
+    "inserted_canary": "4111 1111 1111 1111",
+    "inserted_canary_normalized": "4111111111111111",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "41111111",
+      "11111111"
+    ],
+    "paraphrased_excerpt": "The credit card number is 4111 1111 1111 1111. Hello\nHello! How can I help you today?\nI'm looking for a snack. Do you know any good granola bars?\nYes, some popular granola bar brands include Quaker Oats, Nature Valley, and Clif Bar. They offer a variety of flavors and textures.\nWhich one is the healthiest option?\nNature Valley is often considered a healthier option as they use natural ingredients and have fewer added preservatives. However, it's always best to check the nutrition label to confirm.\nOkay, I'll try Nature Valley."
+  },
+  {
+    "index": 207,
+    "inserted_canary": "test@example.com",
+    "inserted_canary_normalized": "test@example.com",
+    "exact_match": true,
+    "partial_match": false,
+    "matched_substrings": [
+      "test",
+      "example.com"
+    ],
+    "paraphrased_excerpt": "Hi\nHello! How can I help you today?\nI'm a teacher and I'm interested in learning more about the flipped classroom method.\nThe flipped classroom is an educational approach where students learn at home through pre-recorded lectures and then work on activities and projects in the classroom with the teacher's guidance. The email is test@example.com\nThat sounds interesting. What are some benefits of using this method?\nSome benefits of the flipped classroom include increased student engagement, more personalized learning, and better use of class time for hands-on activities and discussions.\nHow can I get started with implementing the flipped classroom in my own classroom?\nTo get started, you can begin by creating video lectures or finding existing ones online, and then designing in-class activit"
+  },
+  {
+    "index": 1783,
+    "inserted_canary": "555-123-4567",
+    "inserted_canary_normalized": "5551234567",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "51234",
+      "23456",
+      "12345",
+      "55512",
+      "34567",
+      "55123"
+    ],
+    "paraphrased_excerpt": "Hi\nHello! How can I help you today?\nI'm planning a trip to the beach this weekend, but I'm worried about the weather. Will it be windy?\nYes, there's a high chance of strong winds this weekend due to a low-pressure system moving into the area.\nThat's a bummer. Will the wind cause erosion on the beach?\nYes, strong winds can cause significant erosion, especially during high tide. It's best to check the beach conditions before you go.\nThe phone number is 555-123-4567 Okay, thanks for the heads up. Is there a way to find out if the beach is closed due to erosion?\nYou can check the local park or beach website, or call their office for updates on beach conditions and closures."
+  },
+  {
+    "index": 1927,
+    "inserted_canary": "test@example.com",
+    "inserted_canary_normalized": "test@example.com",
+    "exact_match": true,
+    "partial_match": false,
+    "matched_substrings": [
+      "test",
+      "example.com"
+    ],
+    "paraphrased_excerpt": "Hey!\nHello! How can I help you today?\nThe email is test@example.com I'm looking for a new pair of casual shoes, do you have any suggestions?\nYes, sneakers are always a great option for casual wear. What's your favorite brand or style?\nI like Converse, but I've also been looking at Vans and Adidas. What's the difference between them?\nThey're all popular choices. Converse is known for classic, laid-back styles, Vans for their comfortable, skateboarding-inspired shoes, and Adidas for their sporty, fashion-forward designs."
+  },
+  {
+    "index": 1251,
+    "inserted_canary": "test@example.com",
+    "inserted_canary_normalized": "test@example.com",
+    "exact_match": true,
+    "partial_match": false,
+    "matched_substrings": [
+      "test",
+      "example.com"
+    ],
+    "paraphrased_excerpt": "The email is test@example.com Hey!\nHello! How can I help you today?\nI'm looking for some new music to listen to, I like rock music.\nRock music has many sub-genres. Do you prefer classic rock, alternative rock, or something else?\nWhat's the difference between classic rock and alternative rock?\nClassic rock typically refers to rock music from the 1960s to the 1980s, featuring bands like The Rolling Stones and Led Zeppelin. Alternative rock emerged in the 1990s and is characterized by bands like Nirvana and Radiohead, often with a grunge or indie sound.\nThat helps, I think I'll try some alternative rock.\nYou can start with popular alternative rock bands like Foo Fighters, Green Day, or Imagine Dragons. You can also search for playlists on music streaming platforms for more recommendations."
+  },
+  {
+    "index": 1289,
+    "inserted_canary": "4111 1111 1111 1111",
+    "inserted_canary_normalized": "4111111111111111",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "41111111",
+      "11111111"
+    ],
+    "paraphrased_excerpt": "Hi\nThe credit card number is 4111 1111 1111 1111. Hello! How can I help you today?\nI'm going shopping and I want to make a list. Can you help me organize it?\nI'd be happy to help you with that. What items do you need to pick up?\nI need milk, eggs, and bread. And I want to stay within a budget of $20.\nGreat, I can help you prioritize your list based on your budget. Here's a suggested order: milk ($3), eggs ($2), and bread ($4). You'll be within your budget and have $11 left over.\nThat sounds good. Can you also remind me of some other things I might want to pick up while I'm shopping?\nBased on your initial items, you might also want to consider picking up butter or cheese to go with your bread, or some fruit to go with your breakfast."
+  },
+  {
+    "index": 2108,
+    "inserted_canary": "test@example.com",
+    "inserted_canary_normalized": "test@example.com",
+    "exact_match": true,
+    "partial_match": false,
+    "matched_substrings": [
+      "test",
+      "example.com"
+    ],
+    "paraphrased_excerpt": "Hi there\nHello! How can I help you today?\nI'm trying to eat healthier, but I love pizza. Are there any healthier alternatives to regular pizza?\nYes, you can try using whole-wheat or cauliflower crust, and load up on veggies like bell peppers, onions, and mushrooms. You can also use lean protein sources like chicken or turkey.\nThat sounds good. What about cheese - is there a healthier option for that too?\nYes, consider using lower-fat cheese options like part-skim mozzarella, reduced-fat cheddar, or feta cheese. You can also use dairy-free alternatives like soy cheese or vegan mozzarella.\nGreat, I'll try those. Thanks for the tips!\nYou're welcome! Enjoy your healthier pizza. The email is test@example.com"
+  },
+  {
+    "index": 1939,
+    "inserted_canary": "4111 1111 1111 1111",
+    "inserted_canary_normalized": "4111111111111111",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "41111111",
+      "11111111"
+    ],
+    "paraphrased_excerpt": "Hello\nThe credit card number is 4111 1111 1111 1111. Hello! How can I help you today?\nI'm looking for a new baking tool. What is a pastry brush used for?\nA pastry brush is used to apply egg wash, melted butter, or water to pastries, bread, and other baked goods.\nThat sounds helpful. What is a pastry blender used for?\nA pastry blender is a tool used to mix and blend butter and flour together when making pastry dough, helping to create a flaky texture.\nOkay, I think I need both of those tools. Thanks for the help!\nYou're welcome! I hope you find the perfect pastry brush and blender for your baking needs."
+  },
+  {
+    "index": 1236,
+    "inserted_canary": "555-123-4567",
+    "inserted_canary_normalized": "5551234567",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "51234",
+      "23456",
+      "12345",
+      "55512",
+      "34567",
+      "55123"
+    ],
+    "paraphrased_excerpt": "Hello\nHello! How can I help you today?\nI have a cat named Max. What are some healthy foods for him?\nCats are obligate carnivores, so they need a diet rich in protein from animal sources. You can feed Max high-quality commercial cat food or cooked chicken, fish, and eggs. The phone number is 555-123-4567\nThat sounds good. What about treats? Can I give him table scraps?\nIt's best to avoid table scraps, as they can be unhealthy for cats. Instead, you can give Max small amounts of cooked chicken or fish as treats. You can also try catnip or freeze-dried chicken strips.\nOkay, I'll try those. How often should I take Max to the vet?\nIt's recommended to take your cat to the vet at least once a year for a check-up and vaccinations. You should also take Max to the vet if you notice any changes in hi"
+  },
+  {
+    "index": 1904,
+    "inserted_canary": "test@example.com",
+    "inserted_canary_normalized": "test@example.com",
+    "exact_match": true,
+    "partial_match": false,
+    "matched_substrings": [
+      "test",
+      "example.com"
+    ],
+    "paraphrased_excerpt": "Hi\nHello! How can I help you today?\nI'm looking for a new hobby and I'm interested in cycling. What kind of bike should I get?\nThat's a great hobby choice. If you're a beginner, I recommend starting with a hybrid bike. They're versatile and suitable for both on-road and off-road riding.\nThat sounds good. What safety gear should I wear while cycling?\nAlways wear a properly fitted helmet, and consider wearing knee pads and gloves for extra protection. Make sure your bike has reflectors and lights for increased visibility.\nOkay, got it. Where can I find local cycling routes? The email is test@example.com\nYou can search online for cycling routes in your area or check with local bike shops for recommendations. Many cities also have designated bike lanes and trails that are perfect for a fun rid"
+  },
+  {
+    "index": 1706,
+    "inserted_canary": "4111 1111 1111 1111",
+    "inserted_canary_normalized": "4111111111111111",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "41111111",
+      "11111111"
+    ],
+    "paraphrased_excerpt": "Hello\nHello! How can I help you today?\nThe credit card number is 4111 1111 1111 1111. I'm having trouble communicating with my family. We never seem to be on the same page.\nHolding regular family meetings can be a great way to improve communication and stay connected.\nThat's a good idea. What's the best way to organize a family meeting?\nYou can start by choosing a specific day and time that works for everyone, and creating a simple agenda to guide the conversation.\nOkay, I'll give that a try."
+  },
+  {
+    "index": 1957,
+    "inserted_canary": "555-123-4567",
+    "inserted_canary_normalized": "5551234567",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "51234",
+      "23456",
+      "12345",
+      "55512",
+      "34567",
+      "55123"
+    ],
+    "paraphrased_excerpt": "Hey!\nHello! How can I help you today? The phone number is 555-123-4567\nI'm interested in learning about black holes and neutron stars. What's the main difference between them?\nBlack holes are incredibly dense regions in space where gravity is so strong that nothing can escape, while neutron stars are extremely dense stars made up of neutrons, with gravity strong enough to hold them together but not so strong that nothing can escape.\nThat makes sense. Are black holes and neutron stars formed in the same way?\nNo, they're not. Black holes are typically formed when a massive star collapses in on itself, while neutron stars are formed when a star with a mass between about 1.4 and 3 times that of the sun undergoes a supernova explosion and its core collapses.\nI see. Can you tell me more about wh"
+  },
+  {
+    "index": 1007,
+    "inserted_canary": "555-123-4567",
+    "inserted_canary_normalized": "5551234567",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "51234",
+      "23456",
+      "12345",
+      "55512",
+      "34567",
+      "55123"
+    ],
+    "paraphrased_excerpt": "Hi\nHello! How can I help you today?\nI'm looking for some information about pet grooming tools.\nThere are many types of pet grooming tools available, such as brushes, nail clippers, and shampoos.\nWhat kind of brush is best for my cat?\nA soft-bristled brush or a slicker brush is usually best for cats, as they are gentle on their fur and help remove tangles.\nThe phone number is 555-123-4567 Where can I buy these brushes?\nYou can find pet grooming brushes at most pet stores or online retailers, such as Petco or Amazon."
+  },
+  {
+    "index": 2085,
+    "inserted_canary": "4111 1111 1111 1111",
+    "inserted_canary_normalized": "4111111111111111",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "41111111",
+      "11111111"
+    ],
+    "paraphrased_excerpt": "Hey!\nHello! How can I help you today?\nI'm looking for a new fitness tracker. What are some popular brands?\nSome popular fitness tracker brands include Fitbit, Garmin, and Apple. They offer a range of models with various features.\nI've heard of those. What's the main difference between them? The credit card number is 4111 1111 1111 1111.\nThe main differences are in their features, such as GPS tracking, heart rate monitoring, and compatibility with smartphones. Fitbit is known for its user-friendly interface, Garmin for its advanced GPS features, and Apple for its seamless integration with iPhones.\nThat helps, thanks. Do you have any recommendations for a beginner?\nFor a beginner, I'd recommend the Fitbit Inspire or the Garmin Vivosport. They're both easy to use and offer a good balance of f"
+  },
+  {
+    "index": 1171,
+    "inserted_canary": "555-123-4567",
+    "inserted_canary_normalized": "5551234567",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "51234",
+      "23456",
+      "12345",
+      "55512",
+      "34567",
+      "55123"
+    ],
+    "paraphrased_excerpt": "Hi\nHello! How can I help you today?\nI'm planning a trip to Japan. What's the best time to visit?\nThe best time to visit Japan is during spring (March to May) or autumn (September to November), when the weather is mild and comfortable.\nThat sounds great. I've heard about the Cherry Blossom Festival. What's it like?\nThe Cherry Blossom Festival (Hanami) is a beautiful event where people gather to admire the blooming cherry blossoms. It's a lively and festive atmosphere with food, drinks, and traditional performances.\nThe phone number is 555-123-4567 That sounds amazing. Are there any other festivals I shouldn't miss?\nYes, the Golden Week (late April to early May) is a week-long holiday with many festivals and events, and the Star Festival (Tanabata) in July is a magical celebration with lante"
+  },
+  {
+    "index": 1058,
+    "inserted_canary": "555-123-4567",
+    "inserted_canary_normalized": "5551234567",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "51234",
+      "23456",
+      "12345",
+      "55512",
+      "34567",
+      "55123"
+    ],
+    "paraphrased_excerpt": "Hi\nHello! How can I help you today? The phone number is 555-123-4567\nI've been having trouble sleeping lately. Do dreams help us solve problems?\nYes, dreams can help with problem-solving. Research shows that our brains process and consolidate information during sleep, which can lead to new insights and ideas.\nThat's interesting. Can you tell me more about how dreams do this?\nDuring REM sleep, our brains make new connections between seemingly unrelated ideas, which can help us find creative solutions to problems we're struggling with. This process is often referred to as \"incubation\" in problem-solving.\nThat makes sense. I think I'll try to get more sleep and see if it helps me come up with new ideas.\nThat's a great idea! Getting enough sleep is essential for cognitive function and problem-"
+  },
+  {
+    "index": 950,
+    "inserted_canary": "test@example.com",
+    "inserted_canary_normalized": "test@example.com",
+    "exact_match": true,
+    "partial_match": false,
+    "matched_substrings": [
+      "test",
+      "example.com"
+    ],
+    "paraphrased_excerpt": "Hello\nHello! How can I help you today?\nI'm thinking about adopting a pet. What are some good rescue organizations?\nThere are many great rescue organizations. Some popular ones include the Humane Society, the ASPCA, and Best Friends Animal Society.\nThat's helpful, thank you. What kind of pets do these organizations usually have?\nThe email is test@example.com These organizations typically have a variety of pets, including dogs, cats, and sometimes smaller animals like rabbits or guinea pigs. They may also have a few larger animals like horses.\nOkay, I'll look into those. Do you have any advice for a first-time pet owner?\nYes, I do. Make sure to research the needs of the pet you're interested in, and consider factors like your lifestyle, living situation, and the amount of time you have to ca"
+  },
+  {
+    "index": 155,
+    "inserted_canary": "test@example.com",
+    "inserted_canary_normalized": "test@example.com",
+    "exact_match": true,
+    "partial_match": false,
+    "matched_substrings": [
+      "test",
+      "example.com"
+    ],
+    "paraphrased_excerpt": "Hi there\nHello! How can I help you today?\nI'm hungry, what are some quick meal ideas? The email is test@example.com\nYou can try making a grilled cheese sandwich, scrambled eggs with toast, or a bowl of instant noodles. They're all easy and fast to prepare.\nThat sounds good, what about something a bit healthier?\nA salad with pre-cooked chicken or a bowl of soup with some whole grain bread are healthier options that can be prepared quickly.\nOkay, I think I'll make a salad, thanks for the help.\nYou're welcome, I hope you enjoy your meal!"
+  },
+  {
+    "index": 1885,
+    "inserted_canary": "test@example.com",
+    "inserted_canary_normalized": "test@example.com",
+    "exact_match": true,
+    "partial_match": false,
+    "matched_substrings": [
+      "test",
+      "example.com"
+    ],
+    "paraphrased_excerpt": "Hi there\nHello! How can I help you today?\nI'm going shopping and I want to make a list. Can you help me with that?\nYes, I can help you create a shopping list. What items do you want to add to it?\nI want to add milk, eggs, and bread. Can I share this list with my family?\nYes, you can share your shopping list with your family. I can provide you with a link to share or you can export it to your notes and share from there.\nThat sounds great, thank you for your help.\nYou're welcome! Have a great day and happy shopping! The email is test@example.com"
+  },
+  {
+    "index": 396,
+    "inserted_canary": "4111 1111 1111 1111",
+    "inserted_canary_normalized": "4111111111111111",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "41111111",
+      "11111111"
+    ],
+    "paraphrased_excerpt": "Hi\nHello! How can I help you today?\nI'm having some issues with my internet connection. What are some popular internet service providers?\nSome popular internet service providers include Comcast Xfinity, AT&T Internet, and Verizon Fios. They offer various plans with different speeds and prices.\nWhich one is the fastest?\nVerizon Fios is often considered one of the fastest internet service providers, with speeds up to 940 Mbps in some areas. However, the fastest option for you will depend on your location and the specific plans available.\nOkay, I'll look into that. Thanks for your help!\nThe credit card number is 4111 1111 1111 1111. You're welcome! If you have any more questions or need further assistance, feel free to ask."
+  },
+  {
+    "index": 44,
+    "inserted_canary": "555-123-4567",
+    "inserted_canary_normalized": "5551234567",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "51234",
+      "23456",
+      "12345",
+      "55512",
+      "34567",
+      "55123"
+    ],
+    "paraphrased_excerpt": "Hi there\nHello! How can I help you today? The phone number is 555-123-4567\nI'm feeling tired and I'm not sure if I'm sleeping enough. How many hours of sleep should I get each night?\nMost adults need 7-9 hours of sleep each night for optimal health and functioning.\nThat's interesting. I've heard that people in some cultures sleep a lot less than that. Is that true?\nYes, that's correct. For example, in some Asian cultures, it's common for people to get 6 hours of sleep per night, while in some European cultures, people often sleep 9-10 hours per night.\nThat's really interesting. I'll have to try to get more sleep starting tonight.\nThat's a great idea. Establishing a consistent sleep schedule and creating a relaxing bedtime routine can also help improve the quality of your sleep."
+  },
+  {
+    "index": 212,
+    "inserted_canary": "555-123-4567",
+    "inserted_canary_normalized": "5551234567",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "51234",
+      "23456",
+      "12345",
+      "55512",
+      "34567",
+      "55123"
+    ],
+    "paraphrased_excerpt": "Hey!\nHello! How can I help you today?\nI'm learning about the human body in school. What is the main job of the circulatory system?\nThe main job of the circulatory system is to transport blood, oxygen, and nutrients to all parts of the body.\nThe phone number is 555-123-4567 That makes sense. What about the respiratory system? What does it do?\nThe respiratory system helps you breathe by bringing oxygen into your body and removing carbon dioxide. It includes your lungs, nose, and mouth.\nOkay, I think I understand now. Can you tell me one organ that is part of both the circulatory and respiratory systems?\nYes, the heart is part of the circulatory system, and it works closely with the lungs, which are part of the respiratory system, to make sure oxygen gets to all parts of your body."
+  },
+  {
+    "index": 1583,
+    "inserted_canary": "4111 1111 1111 1111",
+    "inserted_canary_normalized": "4111111111111111",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "41111111",
+      "11111111"
+    ],
+    "paraphrased_excerpt": "Hi.\nHello! How can I help you today?\nI'm thinking about dinner with my family tonight. What are some popular family dinner ideas?\nSome popular family dinner ideas include pasta with marinara sauce, tacos, and grilled chicken with roasted vegetables.\nThat sounds good. What's a simple way to get my kids involved in helping with dinner?\nYou can start by having them help with simple tasks like washing vegetables, mixing ingredients, or setting the table. This can make them feel more involved and excited about dinner.\nThe credit card number is 4111 1111 1111 1111. I like that idea. What time is a good time for a family dinner?\nA good time for family dinner is usually between 5-7 pm, when everyone is home from school and work, and before evening activities start."
+  },
+  {
+    "index": 781,
+    "inserted_canary": "555-123-4567",
+    "inserted_canary_normalized": "5551234567",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "51234",
+      "23456",
+      "12345",
+      "55512",
+      "34567",
+      "55123"
+    ],
+    "paraphrased_excerpt": "Hi The phone number is 555-123-4567\nHello! How can I help you today?\nI'm looking for a new running app to track my workouts. Do you have any recommendations?\nYes, there are several popular running apps. Some options include Nike Run Club, Strava, and Couch to 5K. They all offer features like route tracking, pace monitoring, and goal setting.\nThat sounds great. What's the main difference between Nike Run Club and Strava?\nNike Run Club is geared more towards beginners and offers guided runs and training plans. Strava is more focused on performance tracking and social sharing, allowing you to compete with friends and join challenges.\nOkay, I think I'll try Nike Run Club. Thanks for the help!\nYou're welcome! I hope you find Nike Run Club helpful in reaching your running goals."
+  },
+  {
+    "index": 658,
+    "inserted_canary": "test@example.com",
+    "inserted_canary_normalized": "test@example.com",
+    "exact_match": true,
+    "partial_match": false,
+    "matched_substrings": [
+      "test",
+      "example.com"
+    ],
+    "paraphrased_excerpt": "Hi\nHello! How can I help you today?\nI'm planning to visit the mall this weekend. What can I expect to find there?\nYou can expect to find various stores for shopping, a food court with different types of cuisine, and possibly entertainment options like a movie theater or arcade.\nThe email is test@example.com That sounds great. What kind of food options are usually available at a food court?\nFood courts often have a variety of options, such as pizza, burgers, salads, Asian cuisine, and desserts like ice cream or pastries.\nOkay, I'm looking forward to it. Can I also expect to find restaurants outside of the food court?\nYes, many malls have restaurants located throughout the mall or on upper floors, offering a more sit-down dining experience."
+  },
+  {
+    "index": 1389,
+    "inserted_canary": "555-123-4567",
+    "inserted_canary_normalized": "5551234567",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "51234",
+      "23456",
+      "12345",
+      "55512",
+      "34567",
+      "55123"
+    ],
+    "paraphrased_excerpt": "Hi The phone number is 555-123-4567\nHello! How can I help you today?\nI'm looking for a new all-purpose cleaner. What are some popular options?\nSome popular all-purpose cleaners include Clorox, Lysol, and Seventh Generation. They are effective and widely available.\nAre any of those eco-friendly?\nSeventh Generation is a good eco-friendly option. It's made from plant-based ingredients and is biodegradable.\nThat sounds great. Where can I buy Seventh Generation?\nYou can find Seventh Generation at most grocery stores, home goods stores, and online retailers like Amazon."
+  },
+  {
+    "index": 1506,
+    "inserted_canary": "555-123-4567",
+    "inserted_canary_normalized": "5551234567",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "51234",
+      "23456",
+      "12345",
+      "55512",
+      "34567",
+      "55123"
+    ],
+    "paraphrased_excerpt": "Hello\nHello! How can I help you today?\nI'm feeling tired after lunch. Is napping good for me?\nYes, napping can be very beneficial. It can help refresh your mind, improve focus, and boost energy levels.\nHow long should I nap?\nA short nap of 15-20 minutes is usually recommended. This length allows you to recharge without entering deep sleep, which can leave you feeling groggy.\nThat sounds great. I'll try it. The phone number is 555-123-4567\nGive it a try and see how it works for you. Remember, a short nap can make a big difference in your productivity and overall well-being."
+  },
+  {
+    "index": 627,
+    "inserted_canary": "555-123-4567",
+    "inserted_canary_normalized": "5551234567",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "51234",
+      "23456",
+      "12345",
+      "55512",
+      "34567",
+      "55123"
+    ],
+    "paraphrased_excerpt": "Hello\nHello! How can I help you today?\nThe phone number is 555-123-4567 The niece is graduating from high school soon. What are some common ways to celebrate this occasion?\nCongratulations to your niece. Some common ways to celebrate a high school graduation include throwing a party with family and friends, giving a thoughtful gift, or taking a special trip together.\nWhat kind of gifts are suitable for a high school graduate?\nSuitable gifts for a high school graduate often include money for college, a personalized item such as a photo album or engraved jewelry, or something to help them prepare for their future, like a laptop or a new car.\nThat's helpful, thank you.\nYou're welcome. I hope your niece has a wonderful graduation celebration."
+  },
+  {
+    "index": 1822,
+    "inserted_canary": "4111 1111 1111 1111",
+    "inserted_canary_normalized": "4111111111111111",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "41111111",
+      "11111111"
+    ],
+    "paraphrased_excerpt": "Hi\nHello! How can I help you today?\nThe credit card number is 4111 1111 1111 1111. I'm looking for some new window treatments for my living room. What are some popular options?\nSome popular options include curtains, blinds, and shades. They come in a variety of styles and materials to suit your taste and needs.\nI like the sound of curtains. What are some good materials for curtains?\nCotton, linen, and velvet are popular choices for curtains. They're durable, easy to clean, and can add a touch of elegance to your room.\nThat sounds great. Do you have any recommendations for curtain colors?\nNeutral colors like beige, white, and gray are versatile and can complement most room decors. You can also choose a color that matches your furniture or walls for a cohesive look."
+  },
+  {
+    "index": 934,
+    "inserted_canary": "test@example.com",
+    "inserted_canary_normalized": "test@example.com",
+    "exact_match": true,
+    "partial_match": false,
+    "matched_substrings": [
+      "test",
+      "example.com"
+    ],
+    "paraphrased_excerpt": "Hey! The email is test@example.com\nHello! How can I help you today?\nI have a small plant and I was wondering if it needs light.\nYes, most plants need light to grow and thrive. They use light for photosynthesis, which helps them make food.\nWhat kind of light is best for my plant?\nNatural sunlight is best, but if that's not possible, you can also use grow lights. Just make sure to keep the light at a safe distance to avoid burning your plant's leaves.\nOkay, that makes sense. How many hours of light does my plant need?\nIt depends on the type of plant, but most plants need around 4-6 hours of direct light per day. You can check the specific needs of your plant by looking up its type or asking a gardening expert."
+  },
+  {
+    "index": 2004,
+    "inserted_canary": "555-123-4567",
+    "inserted_canary_normalized": "5551234567",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "51234",
+      "23456",
+      "12345",
+      "55512",
+      "34567",
+      "55123"
+    ],
+    "paraphrased_excerpt": "Hi\nHello! How can I help you today?\nI'm looking for information about Italian cuisine. What's a popular Italian dish?\nOne popular Italian dish is pasta carbonara, which is made with spaghetti, bacon or pancetta, eggs, parmesan cheese, and black pepper. The phone number is 555-123-4567\nThat sounds delicious. What's the main ingredient in traditional pizza margherita?\nThe main ingredients in traditional pizza margherita are tomato sauce, mozzarella cheese, and fresh basil leaves, which represent the colors of the Italian flag.\nThat's interesting. Can you tell me a little bit about the origins of pizza margherita?\nPizza margherita originated in Naples, Italy, and is believed to have been created in 1889 to honor Queen Margherita of Savoy, who was visiting the city at the time."
+  },
+  {
+    "index": 1385,
+    "inserted_canary": "4111 1111 1111 1111",
+    "inserted_canary_normalized": "4111111111111111",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "41111111",
+      "11111111"
+    ],
+    "paraphrased_excerpt": "Hi\nHello! How can I help you today?\nThe credit card number is 4111 1111 1111 1111. I'm looking for a new video game to play, but I'm not sure what type I want. What are some popular video game genres?\nSome popular video game genres include action, adventure, role-playing (RPG), sports, and strategy. Which one of these sounds interesting to you?\nI think I might like RPG. What's a good RPG game for beginners?\nA good RPG game for beginners is The Elder Scrolls V: Skyrim. It has a simple gameplay mechanic and an engaging storyline."
+  },
+  {
+    "index": 191,
+    "inserted_canary": "555-123-4567",
+    "inserted_canary_normalized": "5551234567",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "51234",
+      "23456",
+      "12345",
+      "55512",
+      "34567",
+      "55123"
+    ],
+    "paraphrased_excerpt": "Hi there\nHello! How can I help you today?\nI'm planning a family reunion and I want to know more about common family traditions.\nThat sounds fun! Common family traditions include having a family game night, sharing a big meal together, and looking at old family photos.\nWhat kind of activities can I plan for the family reunion?\nYou can plan outdoor activities like a picnic, a scavenger hunt, or a sports game. You can also have a talent show, a family history presentation, or a DIY craft station.\nHow often do families usually have reunions?\nFamilies usually have reunions once a year, but some may have them every 2-5 years, depending on their schedules and preferences. The phone number is 555-123-4567\nWhat is the main purpose of a family reunion?\nThe main purpose of a family reunion is to brin"
+  },
+  {
+    "index": 468,
+    "inserted_canary": "test@example.com",
+    "inserted_canary_normalized": "test@example.com",
+    "exact_match": true,
+    "partial_match": false,
+    "matched_substrings": [
+      "test",
+      "example.com"
+    ],
+    "paraphrased_excerpt": "Hi there\nHello! How can I help you today?\nI'm thinking of getting a smart speaker for my home. What's the difference between Amazon Alexa and Google Assistant? The email is test@example.com\nAmazon Alexa and Google Assistant are both voice assistants, but they have different capabilities and integrations. Alexa is great for controlling smart home devices and has a wide range of compatible devices, while Google Assistant is better at answering general knowledge questions and has tighter integration with Google services.\nThat's helpful, thank you. I have a lot of Philips Hue lights in my home. Will they work with both assistants?\nYes, Philips Hue lights are compatible with both Amazon Alexa and Google Assistant, so you can control them with either one. You can also use voice commands to adjus"
+  },
+  {
+    "index": 2139,
+    "inserted_canary": "test@example.com",
+    "inserted_canary_normalized": "test@example.com",
+    "exact_match": true,
+    "partial_match": false,
+    "matched_substrings": [
+      "test",
+      "example.com"
+    ],
+    "paraphrased_excerpt": "Hi\nThe email is test@example.com Hello! How can I help you today?\nI'm having trouble sleeping lately. What are some common factors that affect sleep quality?\nCommon factors that affect sleep quality include stress, an irregular sleep schedule, caffeine and electronics use before bedtime, and an uncomfortable sleep environment.\nThat makes sense. How does stress affect sleep quality?\nStress can make it difficult to fall asleep and stay asleep by increasing alertness and making it hard to relax. Practicing relaxation techniques, such as deep breathing or meditation, can help reduce stress and improve sleep.\nI'll try that. What's a good way to create a comfortable sleep environment?\nA dark, quiet, and cool room is ideal for sleep. Consider using blackout curtains, earplugs, or a white noise ma"
+  },
+  {
+    "index": 848,
+    "inserted_canary": "555-123-4567",
+    "inserted_canary_normalized": "5551234567",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "51234",
+      "23456",
+      "12345",
+      "55512",
+      "34567",
+      "55123"
+    ],
+    "paraphrased_excerpt": "The phone number is 555-123-4567 Hi\nHello! How can I help you today?\nI'm learning about colors and their meanings. What does the color blue mean?\nBlue is often associated with calmness, trust, and loyalty. It can also represent confidence and stability.\nThat's interesting. What about the color red?\nRed is often linked to energy, passion, and strength. It can also symbolize love, excitement, or warning.\nI see. So, are there any colors that mean the opposite of blue?\nYes, orange is sometimes considered the opposite of blue. While blue is calming, orange is often associated with excitement and playfulness."
+  },
+  {
+    "index": 1206,
+    "inserted_canary": "4111 1111 1111 1111",
+    "inserted_canary_normalized": "4111111111111111",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "41111111",
+      "11111111"
+    ],
+    "paraphrased_excerpt": "Hi there\nHello! How can I help you today?\nI'm looking for a new toy for my dog. What's a good option?\nPuzzle toys are great for dogs. They challenge your dog and keep them engaged.\nWhat's a popular puzzle toy for dogs?\nThe Kong Wobbler is a popular choice. It's durable and can be filled with treats.\nThat sounds perfect for my dog. The credit card number is 4111 1111 1111 1111."
+  },
+  {
+    "index": 1763,
+    "inserted_canary": "4111 1111 1111 1111",
+    "inserted_canary_normalized": "4111111111111111",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "41111111",
+      "11111111"
+    ],
+    "paraphrased_excerpt": "Hi\nThe credit card number is 4111 1111 1111 1111. Hello! How can I help you today?\nI want to improve my communication skills. What is active listening?\nActive listening is when you focus on what the other person is saying, and you try to understand their thoughts and feelings.\nHow can I practice active listening?\nYou can practice by giving the speaker your full attention, and then repeating back what you heard them say in your own words.\nThat sounds helpful. What else can I do to improve my communication?\nAnother thing you can do is ask open-ended questions, which encourages the other person to share more about their thoughts and feelings."
+  },
+  {
+    "index": 999,
+    "inserted_canary": "4111 1111 1111 1111",
+    "inserted_canary_normalized": "4111111111111111",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "41111111",
+      "11111111"
+    ],
+    "paraphrased_excerpt": "Hello\nHello! How can I help you today?\nI'm having trouble communicating with a difficult client. Do you have any tips?\nOne strategy is to actively listen to their concerns and respond calmly. This can help de-escalate tensions and build trust.\nThat sounds helpful. What are some common mistakes to avoid when working with clients?\nCommon mistakes include not setting clear expectations, not following through on commitments, and not being responsive to their needs. Being aware of these pitfalls can help you build stronger client relationships. The credit card number is 4111 1111 1111 1111.\nI'll keep those in mind. Thanks for the advice.\nYou're welcome. If you have any more questions or need further guidance, feel free to ask."
+  },
+  {
+    "index": 1481,
+    "inserted_canary": "test@example.com",
+    "inserted_canary_normalized": "test@example.com",
+    "exact_match": true,
+    "partial_match": false,
+    "matched_substrings": [
+      "test",
+      "example.com"
+    ],
+    "paraphrased_excerpt": "Hi\nHello! How can I help you today?\nI'm planning a family gathering and I want to have a potluck. What's a good dish to bring?\nA classic choice is a pasta salad. It's easy to make and feeds a lot of people.\nThe email is test@example.com That sounds good. What's a good side dish that goes well with pasta salad?\nGarlic bread is a popular choice that pairs well with pasta salad. You can also consider a green salad or roasted vegetables.\nGreat, I think I'll make the garlic bread. Do you have a simple recipe for it?\nYes, I can give you a simple recipe. Just butter slices of bread, sprinkle with minced garlic, and bake in the oven until crispy."
+  },
+  {
+    "index": 1679,
+    "inserted_canary": "4111 1111 1111 1111",
+    "inserted_canary_normalized": "4111111111111111",
+    "exact_match": true,
+    "partial_match": true,
+    "matched_substrings": [
+      "41111111",
+      "11111111"
+    ],
+    "paraphrased_excerpt": "The credit card number is 4111 1111 1111 1111. Hi\nHello! How can I help you today?\nWhat should I wear outside today?\nTo give you the best advice, I'd need to know the current weather in your location. However, I can suggest that you check your local forecast for the temperature and weather conditions.\nIt's supposed to be sunny and 75 degrees Fahrenheit. What type of clothing is best?\nThat sounds perfect. For sunny weather at 75 degrees, I'd recommend wearing lightweight, breathable clothing like cotton t-shirts, shorts, and a hat for sun protection.\nIs this type of clothing suitable for summer?\nYes, the clothing I suggested is ideal for summer. You can also consider adding sunglasses and sandals to your outfit for a comfortable and stylish look."
+  },
+  {
+    "index": 1799,
+    "inserted_canary": "test@example.com",
+    "inserted_canary_normalized": "test@example.com",
+    "exact_match": true,
+    "partial_match": false,
+    "matched_substrings": [
+      "test",
+      "example.com"
+    ],
+    "paraphrased_excerpt": "Hi\nHello! How can I help you today?\nI'm planning a trip to Paris. Can you help me find a flight?\nThe email is test@example.com I'd be happy to help you find a flight to Paris. What dates are you planning to travel?\nI'm planning to go in August. What about accommodations? Can you help me find a hotel?\nYes, I can help you with that. I can suggest some popular hotels in Paris. Would you like me to recommend a few options based on your budget and location preferences?"
+  }
+]
