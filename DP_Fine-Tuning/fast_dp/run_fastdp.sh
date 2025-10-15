@@ -1,13 +1,13 @@
 #!/bin/bash
 #SBATCH -N 1                          # allocate 1 compute node
 #SBATCH -n 1                          # total number of tasks
-#SBATCH --mem=32g                     # allocate 32 GB of memory
-#SBATCH -J "run_fastDP"              # name of the job
-#SBATCH -o fastdp_run_%j.out         # name of the output file
-#SBATCH -e fastdp_run_%j.err         # name of the error file
+#SBATCH --mem=64g                     # allocate 32 GB of memory
+#SBATCH -J "deep_speed_run_fastDP"              # name of the job
+#SBATCH -o deep_speed_fastdp_run_%j.out         # name of the output file
+#SBATCH -e deep_speed_fastdp_run_%j.err         # name of the error file
 #SBATCH -p short                      # partition to submit to
-#SBATCH -t 18:00:00                   # time limit of 12 hours
-#SBATCH --gres=gpu:H200:1             # request 1 H200 GPU
+#SBATCH -t 10:00:00                   # time limit of 12 hours
+#SBATCH --gres=gpu:H200:2             # request 1 H200 GPU
 
 cd $SLURM_SUBMIT_DIR/..
 
@@ -28,6 +28,7 @@ pip install tqdm
 pip install scikit-learn
 pip install accelerate
 pip install peft
+pip install deepspeed
 
-python -m fast_dp.fastdp
+deepspeed --num_gpus=2 fast_dp/fastdp.py --deepspeed_config ds_config.json
 

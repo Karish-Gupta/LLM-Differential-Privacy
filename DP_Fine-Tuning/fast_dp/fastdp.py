@@ -7,6 +7,7 @@ from utils.model_utils import *
 from utils.gpu_usage import *
 from utils.preprocessing import preprocess_dataset
 from huggingface_hub import login
+import deepspeed
 import os
 
 # Login to HF CLI
@@ -85,9 +86,9 @@ class FastDPModel:
          seed=seed
       )
 
-   def init_model(self):
-      self.model = AutoModelForCausalLM.from_pretrained(self.model_name, device_map="cuda:0")
-      self.model = self.model.to(torch.float16)
+   def init_model(self, deepspeed_config="ds_config.json"):
+      # load model *without* device_map (DeepSpeed handles placement)
+      self.model = AutoModelForCausalLM.from_pretrained(self.model_name, torch_dtype=torch.float16)
       self.model.gradient_checkpointing_enable()
 
       target_modules = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
@@ -134,61 +135,69 @@ class FastDPModel:
       print(f"  Epochs: {self.num_epochs}")
       print(f"  Steps per epoch: {self.train_size // effective_batch_size}")
 
+      # Initialize DeepSpeed engine (returns engine as model)
+      self.model, self.optimizer, _, _ = deepspeed.initialize(
+         model=self.model,
+         optimizer=self.optimizer,
+         config="ds_config.json"
+      )
+      # Since self.model is a DeepSpeedEngine (use .module to access HF model)
+      print("DeepSpeed initialized (engine):", type(self.model))
+
 
    def train(self):
       self.model.train()
       global_step = 0
-      
+      # Device comes from engine
+      engine = self.model
       for epoch in range(self.num_epochs):
          running_loss = 0.0
          epoch_steps = 0
-         
          for step, batch in enumerate(self.train_loader):
-            input_ids = batch["input_ids"].to(self.device)
-            attention_mask = batch["attention_mask"].to(self.device)
-            labels = batch["labels"].to(self.device)
+            device = engine.device
+            input_ids = batch["input_ids"].to(device)
+            attention_mask = batch["attention_mask"].to(device)
+            labels = batch["labels"].to(device)
 
-            outputs = self.model(
-               input_ids=input_ids, 
-               attention_mask=attention_mask, 
-               labels=labels
-            )
-            loss = outputs.loss            
+            # Forward via DeepSpeed engine
+            outputs = engine(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
+            loss = outputs.loss if hasattr(outputs, "loss") else outputs[0]
+
+            # If you keep manual accumulation: scale loss
             loss = loss / self.gradient_accumulation_steps
-            loss.backward()
+
+            # Backward via engine
+            engine.backward(loss)
 
             if (step + 1) % self.gradient_accumulation_steps == 0:
-               self.optimizer.step()
-               self.optimizer.zero_grad()
+               engine.step()    # DeepSpeed handles optimizer.step() etc.
                global_step += 1
                epoch_steps += 1
 
             running_loss += loss.item() * self.gradient_accumulation_steps
-            
-            # More frequent logging
-            if (step + 1) % 500 == 0:
-               avg_loss = running_loss / (step + 1)
-               print(f"Epoch {epoch+1}/{self.num_epochs}, Step {step+1}, "
-                     f"Loss: {avg_loss:.4f}, Global Step: {global_step}")
-         
-         # Epoch summary
-         epoch_loss = running_loss / len(self.train_loader)
-         print(f"\n{'='*60}")
-         print(f"Epoch {epoch+1}/{self.num_epochs} Complete")
-         print(f"  Average Loss: {epoch_loss:.4f}")
-         print(f"  Steps: {epoch_steps}")
-         print(f"{'='*60}\n")
 
-      # Detach privacy engine
+            if (step + 1) % 500 == 0 and engine.is_global_zero:
+               avg_loss = running_loss / (step + 1)
+               print(f"Epoch {epoch+1}, Step {step+1}, Loss {avg_loss:.4f}, Global Step {global_step}")
+
+         if engine.is_global_zero:
+            epoch_loss = running_loss / len(self.train_loader)
+            print(f"Epoch {epoch+1} complete — Avg Loss: {epoch_loss:.4f} — Steps: {epoch_steps}")
+
+      # Detach privacy engine (best-effort)
       try:
          self.privacy_engine.detach()
       except Exception:
          pass
 
-      # Save LoRA adapters only
-      adapter_dir = "./llama3-8b-instruct-squad-dp-lora"
-      self.model.save_pretrained(adapter_dir)
-      self.tokenizer.save_pretrained(adapter_dir)
+      # Save LoRA adapters: underlying HF model is engine.module
+      underlying = getattr(self.model, "module", self.model)
+      if engine.is_global_zero:
+         try:
+            underlying.save_pretrained("./adapter_dir")
+            self.tokenizer.save_pretrained("./adapter_dir")
+         except Exception as e:
+            print("Save failed:", e)
    
    def evaluate(self):
       if self.val_loader is None:
