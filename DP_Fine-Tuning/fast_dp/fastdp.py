@@ -19,7 +19,7 @@ from torch.distributed.fsdp import (
    MixedPrecision,
 )
 from torch.distributed.fsdp.wrap import (
-   default_auto_wrap_policy,
+   size_based_auto_wrap_policy,  # using size_based_auto_wrap_policy instead of default_auto_wrap_policy
    enable_wrap,
    wrap,
 )
@@ -97,17 +97,29 @@ class FastDPModel:
       self.privacy_engine = None
       
       # Initialize distributed environment if using FSDP
-      if self.use_fsdp and not dist.is_initialized():
-         dist.init_process_group(backend="nccl")
-         self.local_rank = int(os.environ.get("LOCAL_RANK", 0))
-         self.rank = int(os.environ.get("RANK", 0))
-         self.world_size = int(os.environ.get("WORLD_SIZE", 1))
+      if self.use_fsdp:
+         if not dist.is_initialized():
+            # With torchrun, these environment variables should be set automatically
+            self.local_rank = int(os.environ.get("LOCAL_RANK", 0))
+            self.rank = int(os.environ.get("RANK", 0))
+            self.world_size = int(os.environ.get("WORLD_SIZE", 1))
+            
+            # Initialize process group
+            dist.init_process_group(backend="gloo")  # Use gloo backend for CPU
+            
+         else:
+            # If already initialized, just get the ranks
+            self.local_rank = dist.get_rank()
+            self.rank = dist.get_rank()
+            self.world_size = dist.get_world_size()
+            
+         # Set device for this process
          torch.cuda.set_device(self.local_rank)
          self.is_main_process = (self.rank == 0)
          self.accelerator = None
       else:
          # Fall back to Accelerator if not using FSDP
-         self.accelerator = Accelerator(mixed_precision="fp16")
+         self.accelerator = Accelerator(mixed_precision="no")  # Use no mixed precision (full fp32)
          self.is_main_process = self.accelerator.is_main_process
 
 
@@ -145,7 +157,7 @@ class FastDPModel:
 
    def init_model(self):
       self.model = AutoModelForCausalLM.from_pretrained(self.model_name)
-      self.model = self.model.to(torch.float16)
+      self.model = self.model.to(torch.float32)  # Changed to float32
       self.model.gradient_checkpointing_enable()
 
       target_modules = self.lora_target_modules or ["q_proj", "k_proj", "v_proj", "o_proj"]
@@ -168,9 +180,9 @@ class FastDPModel:
          mixed_precision_policy = None
          if self.mixed_precision:
             mixed_precision_policy = MixedPrecision(
-               param_dtype=torch.float16,
-               reduce_dtype=torch.float16,
-               buffer_dtype=torch.float16,
+               param_dtype=torch.float32,
+               reduce_dtype=torch.float32,
+               buffer_dtype=torch.float32,
             )
          
          # Define CPU offload if enabled
@@ -180,7 +192,7 @@ class FastDPModel:
          
          # Define auto wrap policy
          auto_wrap_policy = functools.partial(
-            default_auto_wrap_policy,
+            size_based_auto_wrap_policy,
             min_num_params=self.fsdp_min_num_params,
          )
          
@@ -320,7 +332,7 @@ class FastDPModel:
 
 if __name__ == "__main__":
    # Model Configs
-   model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
+   model_name = "meta-llama/Meta-Llama-3.1-8B-Instruct"
    dataset_name = "squad"
    train_batch_size = 4
    eval_batch_size = 4
@@ -335,10 +347,10 @@ if __name__ == "__main__":
    eval_size = 500
    
    # FSDP Configs
-   use_fsdp = True
+   use_fsdp = torch.cuda.is_available()  # Only use FSDP if GPUs are available
    fsdp_min_num_params = 1e6  # Auto-wrap modules with >1M params
    cpu_offload = False
-   mixed_precision = True
+   mixed_precision = False  # Changed to False for full fp32 precision
 
 
    fastdp = FastDPModel(
