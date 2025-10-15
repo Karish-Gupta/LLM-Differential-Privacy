@@ -3,9 +3,9 @@ import torch
 from peft import LoraConfig, get_peft_model, TaskType
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from fastDP import PrivacyEngine
-from utils.model_utils import *
-from utils.gpu_usage import *
-from utils.preprocessing import preprocess_dataset
+from model_utils import *
+from gpu_usage import *
+from preprocessing import preprocess_dataset
 from huggingface_hub import login
 import deepspeed
 import os
