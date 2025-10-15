@@ -1,10 +1,8 @@
-# generate_samples_with_canaries.py
 import random
 import json
 from datasets import load_dataset
 
-# Each entry: [injected_text, pii_token]
-# NOTE: pii_token must be a Python string (quoted).
+
 CANARY_PAIRS = [
     ["My credit card number is 4111 1111 1111 1111.", "4111 1111 1111 1111"],
     ["My email is test@example.com", "test@example.com"],

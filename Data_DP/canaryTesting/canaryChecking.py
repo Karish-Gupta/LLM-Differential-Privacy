@@ -1,4 +1,3 @@
-# canary_paraphrase_check_pii_only.py
 import json
 import re
 import random
@@ -7,29 +6,11 @@ from typing import Callable
 INPUT_FILE = "samples_with_canaries.json"
 OUTPUT_FILE = "canary_check_results.json"
 
-# ---------------------------
 # Paraphraser backends (swap as needed)
-# ---------------------------
 def paraphrase_local(text: str) -> str:
-    # trivial placeholder; replace with real model call
-    return text.replace("My", "The")  # very simple paraphrase
+    return text.replace("My", "The")
 
-# Example OpenAI paraphraser stub (uncomment & adapt if you use openai)
-# def paraphrase_openai(text: str) -> str:
-#     from openai import OpenAI
-#     client = OpenAI()
-#     response = client.chat.completions.create(
-#         model="gpt-4o-mini",
-#         messages=[
-#             {"role": "system", "content": "You are a helpful paraphrasing assistant."},
-#             {"role": "user", "content": f"Paraphrase the following text:\n\n{text}"}
-#         ]
-#     )
-#     return response.choices[0].message.content.strip()
-
-# ---------------------------
 # PII Normalization & Detection
-# ---------------------------
 def normalize_text_for_search(s: str) -> str:
     """Lowercase and collapse whitespace; keep punctuation (we'll remove selectively for different PII types)."""
     s = s or ""
@@ -104,9 +85,7 @@ def check_pii_presence(pii_raw: str, pii_normalized: str, paraphrased_text: str)
         "matched_substrings": list(set(matched)),
     }
 
-# ---------------------------
-# Main runner
-# ---------------------------
+
 def run_canary_check(input_file=INPUT_FILE,
                      paraphraser: Callable[[str], str] = paraphrase_local,
                      output_file=OUTPUT_FILE,
@@ -166,5 +145,4 @@ def run_canary_check(input_file=INPUT_FILE,
     print(f"{exact}/{total} exact matches; {partial}/{total} partial matches")
 
 if __name__ == "__main__":
-    # swap paraphrase_local for a real paraphrase function when you're ready
     run_canary_check(paraphraser=paraphrase_local, n=None)
