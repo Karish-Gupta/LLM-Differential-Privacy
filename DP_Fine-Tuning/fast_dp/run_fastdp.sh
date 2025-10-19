@@ -29,6 +29,7 @@ pip install scikit-learn
 pip install accelerate
 pip install peft
 pip install deepspeed
+pip install fairscale
 
 deepspeed --num_gpus=2 fast_dp/fastdp.py --deepspeed_config fast_dp/ds_config.json
 
