@@ -30,5 +30,5 @@ pip install accelerate
 pip install peft
 pip install deepspeed
 
-deepspeed --num_gpus=2 fast_dp/fastdp.py --deepspeed_config ds_config.json
+deepspeed --num_gpus=2 fast_dp/fastdp.py --deepspeed_config fast_dp/ds_config.json
 

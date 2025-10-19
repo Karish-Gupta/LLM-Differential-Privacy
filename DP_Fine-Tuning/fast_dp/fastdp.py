@@ -2,13 +2,14 @@ import numpy as np
 import torch
 from peft import LoraConfig, get_peft_model, TaskType
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from fastDP import PrivacyEngine
+from fastDP import PrivacyEngine_Distributed_Stage_2_and_3
 from model_utils import *
 from gpu_usage import *
 from preprocessing import preprocess_dataset
 from huggingface_hub import login
 import deepspeed
 import os
+import json
 
 # Login to HF CLI
 if "HF_TOKEN" in os.environ:
@@ -109,7 +110,23 @@ class FastDPModel:
       self.optimizer = torch.optim.AdamW(trainable_params, lr=self.learning_rate)
 
       effective_batch_size = self.train_batch_size * self.gradient_accumulation_steps
-      self.privacy_engine = PrivacyEngine(
+      
+      # self.privacy_engine = PrivacyEngine(
+      #    self.model,
+      #    batch_size=effective_batch_size,
+      #    sample_size=self.train_size,
+      #    epochs=self.num_epochs,
+      #    target_epsilon=self.target_epsilon,
+      #    clipping_fn="automatic",
+      #    clipping_mode="MixOpt",
+      #    clipping_style="layer-wise",
+      #    loss_reduction="mean",
+      #    record_snr=True,
+      #    accounting_mode="rdp"
+      # )
+
+      # create the fastDP distributed engine (it understands ZeRO stage 2/3)
+      self.privacy_engine = PrivacyEngine_Distributed_Stage_2_and_3(
          self.model,
          batch_size=effective_batch_size,
          sample_size=self.train_size,
@@ -120,12 +137,15 @@ class FastDPModel:
          clipping_style="layer-wise",
          loss_reduction="mean",
          record_snr=True,
-         accounting_mode="rdp"
+         accounting_mode="rdp",
+         num_GPUs=torch.distributed.get_world_size(),
+         torch_seed_is_fixed=True
       )
 
-      print("Attaching PrivacyEngine...")
-      self.privacy_engine.attach(self.optimizer)
-      print("PrivacyEngine attached.")
+      # Distributed Stage 2 and 3 privacy engine does not attach to optimizer
+      # print("Attaching PrivacyEngine...")
+      # self.privacy_engine.attach(self.optimizer)
+      # print("PrivacyEngine attached.")
 
       print(f"\nPrivacy Configuration:")
       print(f"  Target ε: {self.target_epsilon}")
@@ -136,10 +156,14 @@ class FastDPModel:
       print(f"  Steps per epoch: {self.train_size // effective_batch_size}")
 
       # Initialize DeepSpeed engine (returns engine as model)
+
+      with open("fast_dp/ds_config.json") as f:
+         ds_config = json.load(f)
+
       self.model, self.optimizer, _, _ = deepspeed.initialize(
          model=self.model,
          optimizer=self.optimizer,
-         config="ds_config.json"
+         config=ds_config
       )
       # Since self.model is a DeepSpeedEngine (use .module to access HF model)
       print("DeepSpeed initialized (engine):", type(self.model))
