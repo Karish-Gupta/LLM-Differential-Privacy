@@ -89,7 +89,7 @@ class FastDPModel:
 
    def init_model(self, deepspeed_config="ds_config.json"):
       # load model *without* device_map (DeepSpeed handles placement)
-      self.model = AutoModelForCausalLM.from_pretrained(self.model_name, dtype=torch.float16)
+      self.model = AutoModelForCausalLM.from_pretrained(self.model_name, torch_dtype=torch.float16)
       self.model.gradient_checkpointing_enable()
 
       target_modules = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]

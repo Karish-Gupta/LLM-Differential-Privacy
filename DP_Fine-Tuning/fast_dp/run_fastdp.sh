@@ -20,16 +20,16 @@ source env/bin/activate
 pip install --upgrade pip
 pip install git+https://github.com/awslabs/fast-differential-privacy.git
 pip install -U "huggingface_hub[cli]"
-pip install numpy
-pip install torch
-pip install transformers
+pip install numpy==1.26.4
+pip install torch==2.1.1
+pip install transformers==4.48.0
 pip install datasets
 pip install tqdm
 pip install scikit-learn
 pip install accelerate
 pip install peft
-pip install deepspeed
-pip install fairscale
+pip install deepspeed==0.10.3
+pip install fairscale==0.4.13
 
 deepspeed --num_gpus=2 fast_dp/fastdp.py --deepspeed_config fast_dp/ds_config.json
 
