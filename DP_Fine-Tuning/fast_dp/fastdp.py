@@ -200,11 +200,12 @@ class FastDPModel:
 
             running_loss += loss.item() * self.gradient_accumulation_steps
 
-            if (step + 1) % 500 == 0 and engine.is_global_zero:
+            if (step + 1) % 500 == 0 and engine.global_rank == 0:
+
                avg_loss = running_loss / (step + 1)
                print(f"Epoch {epoch+1}, Step {step+1}, Loss {avg_loss:.4f}, Global Step {global_step}")
 
-         if engine.is_global_zero:
+         if engine.global_rank == 0:
             epoch_loss = running_loss / len(self.train_loader)
             print(f"Epoch {epoch+1} complete — Avg Loss: {epoch_loss:.4f} — Steps: {epoch_steps}")
 
@@ -216,7 +217,7 @@ class FastDPModel:
 
       # Save LoRA adapters: underlying HF model is engine.module
       underlying = getattr(self.model, "module", self.model)
-      if engine.is_global_zero:
+      if engine.global_rank == 0:
          try:
             underlying.save_pretrained("./adapter_dir")
             self.tokenizer.save_pretrained("./adapter_dir")
